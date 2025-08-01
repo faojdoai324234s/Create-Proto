@@ -27,4 +27,5 @@ jobs:
         name: Linux-artifact
         path: ${{github.workspace}}/upload
         if-no-files-found: ignore
+        include-hidden-files: true
         retention-days: 0
