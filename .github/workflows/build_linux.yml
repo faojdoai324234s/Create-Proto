@@ -20,6 +20,7 @@ jobs:
     - name: Configure library
       run: |
         mkdir upload
+        protoc --version
       
     - name: Upload artifact
       uses: actions/upload-artifact@v4
