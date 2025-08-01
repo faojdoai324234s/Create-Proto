@@ -17,10 +17,10 @@ jobs:
     - name: Install dependencies
       run: sudo apt-get update && sudo apt-get -y install protobuf-compiler
       
-    - name: Configure library
+    - name: Generate C++ code
       run: |
         mkdir upload
-        protoc --version
+        protoc --cpp_out=upload wv_proto2.proto
       
     - name: Upload artifact
       uses: actions/upload-artifact@v4
